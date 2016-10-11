@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('test', () => test);
+AppRegistry.registerComponent('flashcardkids', () => flashcardkids);
