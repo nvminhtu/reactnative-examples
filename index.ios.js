@@ -12,8 +12,8 @@ import {
   View
 } from 'react-native';
 
-class test extends Component {
-  render() {
+class Flashcard extends Component {
+  /* render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -28,7 +28,27 @@ class test extends Component {
         </Text>
       </View>
     );
+  } */
+
+  navSecond(){
+    this.props.navigator.push({
+      id: 'second'
+    })
   }
+
+  render() {
+      return (
+        <View style={styles.container}>
+          <ToolbarAndroid style={styles.toolbar}
+                          title={this.props.title}
+                          titleColor={'#FFFFFF'}/>
+          <TouchableHighlight onPress={this.navSecond.bind(this)}>
+            <Text>Navigate to second screen</Text>
+          </TouchableHighlight>
+        </View>
+      );
+    }
+
 }
 
 const styles = StyleSheet.create({
@@ -50,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('flashcardkids', () => flashcardkids);
+AppRegistry.registerComponent('Flashcard', () => Flashcard);
