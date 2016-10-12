@@ -12,8 +12,10 @@ import {
   View
 } from 'react-native';
 
+//import ArtistListScreen from "./components/ArtistListScreen.js";
+import Social from "./components/card.js";
 class Flashcard extends Component {
-  /* render() {
+ render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -27,27 +29,11 @@ class Flashcard extends Component {
           Cmd+D or shake for dev menu
         </Text>
       </View>
-    );
-  } */
+      <Social></Social>
 
-  navSecond(){
-    this.props.navigator.push({
-      id: 'second'
-    })
+    );
   }
 
-  render() {
-      return (
-        <View style={styles.container}>
-          <ToolbarAndroid style={styles.toolbar}
-                          title={this.props.title}
-                          titleColor={'#FFFFFF'}/>
-          <TouchableHighlight onPress={this.navSecond.bind(this)}>
-            <Text>Navigate to second screen</Text>
-          </TouchableHighlight>
-        </View>
-      );
-    }
 
 }
 
